@@ -1,0 +1,9 @@
+.form-task {
+    display: grid;
+    grid-template-columns: min-content auto;
+    row-gap: 0.3ch;
+    .form-task button[type="submit"] {
+        grid-column: 2;
+        justify-self: flex-end;
+    }
+}

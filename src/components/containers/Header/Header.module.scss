@@ -1,0 +1,14 @@
+.header{
+    display: flex;
+    height: 8rem;
+    border-bottom: 0.1ch lightpink solid;
+    width: 100%;
+    gap: 2ch;
+    padding: 1ch;
+    box-sizing: border-box;
+    p{
+        font-size: 1.5em;
+        font-weight: 600;
+        align-self: center;
+    }
+}

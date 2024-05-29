@@ -1,0 +1,55 @@
+/* List */
+.task-list {
+    display: flex;
+    flex-direction: column;
+    gap: 2ch;
+}
+
+.task {
+    display: flex;
+    flex-direction: row;
+    padding: 0.5ch;
+    >.info,
+    >.action {
+        display: flex;
+        flex-direction: column;
+    }
+
+    >.info {
+        flex-grow: 1;
+        display: flex;
+        flex-direction: column;
+    }
+
+    >.info>p:first-child {
+        font-size: 1.2em;
+    }
+
+    >.action {
+        justify-self: stretch;
+        gap: 0.5ch;
+    }
+
+    &:not(:last-child) {
+        border-bottom: #3e5365 solid 0.3ch;
+    }
+
+    &.finish {
+        color: #7a7a7a;
+        background: repeating-linear-gradient(-30deg,
+                #fff6fe,
+                #fff6fe, 1em,
+                #e1d5d5 1em,
+                #e1d5d5 2em);
+    }
+}
+
+.urgent::after {
+    content: '(Urgent)';
+    color: crimson;
+    font-weight: bold;
+}
+
+.task.finish .urgent::after {
+    color: rgb(207, 99, 121);
+}
